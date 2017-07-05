@@ -1,7 +1,6 @@
 package com.learnium.RNDeviceInfo;
 
 import android.app.KeyguardManager;
-import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -98,14 +97,14 @@ public class RNDeviceModule extends ReactContextBaseJavaModule {
 
     String deviceName = "Unknown";
 
-    try {
-      BluetoothAdapter myDevice = BluetoothAdapter.getDefaultAdapter();
-      if(myDevice!=null){
-        deviceName = myDevice.getName();
-      }
-    } catch(Exception e) {
-      e.printStackTrace();
-    }
+    // try {
+    //   BluetoothAdapter myDevice = BluetoothAdapter.getDefaultAdapter();
+    //   if(myDevice!=null){
+    //     deviceName = myDevice.getName();
+    //   }
+    // } catch(Exception e) {
+    //   e.printStackTrace();
+    // }
 
     constants.put("deviceName", deviceName);
     constants.put("systemName", "Android");
